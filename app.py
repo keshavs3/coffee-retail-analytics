@@ -259,6 +259,7 @@ if section == "Overview":
 
     # REVENUE TREND CHART BY HOUR
     left_col, right_col = st.columns(2)
+
     with left_col:
         st.subheader("Revenue Trend by Hour")
         if "hour" in filtered.columns:
@@ -267,6 +268,19 @@ if section == "Overview":
             fig.update_traces(line_color=COLOR_BEAN, line_width=4, marker=dict(size=6, color=COLOR_MOCHA))
             fig = apply_theme(fig)
             st.plotly_chart(fig, use_container_width=True, theme=None)
+
+            # Data Narrative description for the Time-Series chart
+            st.markdown(
+                """
+                <div style="font-size: 14.5px; color: #4E342E; line-height: 1.6; margin-top: 8px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                    <b>➤ Hourly Revenue Distribution Profile:</b><br>
+                    Tracks intra-day transaction density and sales velocities across operational windows. 
+                    Use this distribution to align barista shift pacing, batch-brewing schedules, 
+                    and inventory prep around peak consumer traffic blocks.
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
         else:
             st.warning("Hour dimension metrics not parsed in active dataset profiles.")
 
@@ -279,6 +293,19 @@ if section == "Overview":
         fig = apply_theme(fig)
         fig.update_layout(showlegend=False, xaxis_title="Category", yaxis_title="Revenue ($)")
         st.plotly_chart(fig, use_container_width=True, theme=None)
+
+        # Data Narrative description for the Category Pareto breakdown chart
+        st.markdown(
+            """
+            <div style="font-size: 14.5px; color: #4E342E; line-height: 1.6; margin-top: 8px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <b>➤ Product Category Contribution Mix:</b><br>
+                Isolates macro gross volume contributions across primary inventory segments. 
+                Monitoring this baseline spread helps gauge catalog diversification, track product dependency, 
+                and flag shifting customer category preference cycles.
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 
 # ==================================================
 # PRODUCTS ROUTE
