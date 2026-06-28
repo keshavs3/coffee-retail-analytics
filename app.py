@@ -404,74 +404,34 @@ if section == "Products":
 
         st.markdown(
             f"""
-            <div style="
-                background-color: #FDFBF7; 
-                padding: 24px; 
-                border-radius: 12px; 
-                border: 1px solid #EFEBE9; 
-                border-left: 8px solid #2E7D32; 
-                margin-top: 20px; 
-                margin-bottom: 25px;
-                box-shadow: 0 4px 12px rgba(46, 125, 50, 0.03);
-                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            ">
-                <!-- Section Header Element -->
-                <h3 style="
-                    margin: 0 0 18px 0; 
-                    color: #1B5E20; 
-                    font-size: 1.85rem; 
-                    font-weight: 800; 
-                    letter-spacing: -0.5px;
-                ">
-                    📊 Portfolio Concentration & Performance
-                </h3>
-
-                <!-- Flex Container Layout Area -->
-                <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: stretch;">
-
-                    <!-- Hero Product Feature Item Card -->
-                    <div style="
-                        flex: 1.5; 
-                        min-width: 260px; 
-                        display: flex; 
-                        flex-direction: column; 
-                        justify-content: center;
-                        padding-right: 10px;
-                    ">
-                        <span style="color: #2E7D32; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">
-                            🥇 Leading Revenue Anchor
-                        </span>
-                        <h4 style="color: #3E2723; margin: 6px 0 0 0; font-size: 24px; font-weight: 800; letter-spacing: -0.3px; line-height: 1.3;">
-                            {hero_product}
-                        </h4>
+            <div style="background-color: #FDFBF7; padding: 22px; border-radius: 8px; border: 1px solid #EFEBE9; border-left: 6px solid #2E7D32; margin-top: 15px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <h3 style="margin: 0 0 15px 0; color: #1B5E20; font-size: 2.2rem;">Portfolio Concentration & Performance</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                    <div style="flex: 1.5; min-width: 280px;">
+                        <h4 style="margin: 0 0 4px 0; color: #2E7D32; font-size: 1.8rem;">🥇 Hero Product</h4>
+                        <p style="margin: 6px 0; font-size: 24px; font-weight: bold; color: #3E2723;">➝ {hero_product}</p>
                     </div>
-
-                    <!-- Financial Yield Metric Card Frame -->
-                    <div style="flex: 1; min-width: 175px; background: white; padding: 18px 16px; border-radius: 10px; border: 1px solid #F5F5F5; box-shadow: 0 2px 6px rgba(0,0,0,0.015);">
-                        <div style="font-size: 11px; color: #757575; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Hero Revenue</div>
-                        <div style="font-size: 24px; font-weight: 800; color: #3E2723; margin: 4px 0 2px 0; letter-spacing: -0.5px;">${hero_revenue:,.2f}</div>
-                        <div style="font-size: 13px; color: #2E7D32; font-weight: 700;">★ {hero_share:.1f}% Share</div>
+                    <div style="flex: 1; min-width: 180px; background: white; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                        <div style="font-size: 12px; color: #757575; text-transform: uppercase;">Hero Revenue</div>
+                        <div style="font-size: 18px; font-weight: 800; color: #3E2723;">${hero_revenue:,.2f}</div>
+                        <div style="font-size: 14px; color: #2E7D32; font-weight: 600;">{hero_share:.1f}% share</div>
                     </div>
-
-                    <!-- Asset Multiplier Velocity Metric Card Frame -->
-                    <div style="flex: 1; min-width: 175px; background: white; padding: 18px 16px; border-radius: 10px; border: 1px solid #F5F5F5; box-shadow: 0 2px 6px rgba(0,0,0,0.015);">
-                        <div style="font-size: 11px; color: #757575; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Catalog Multiplier</div>
-                        <div style="font-size: 24px; font-weight: 800; color: #2E7D32; margin: 4px 0 2px 0; letter-spacing: -0.5px;">{multiplier:.1f}x Higher</div>
-                        <div style="font-size: 12px; color: #A1887F; font-weight: 500; font-style: italic;">vs baseline variant avg</div>
+                    <div style="flex: 1; min-width: 180px; background: white; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                        <div style="font-size: 12px; color: #757575; text-transform: uppercase;">Catalog Multiplier</div>
+                        <div style="font-size: 18px; font-weight: 800; color: #2E7D32;">{multiplier:.1f}x Higher</div>
+                        <div style="font-size: 12px; color: #A1887F;">than average variant</div>
                     </div>
-
-                    <!-- Pareto Operational Efficiency Metric Card Frame -->
-                    <div style="flex: 1; min-width: 175px; background: white; padding: 18px 16px; border-radius: 10px; border: 1px solid #F5F5F5; box-shadow: 0 2px 6px rgba(0,0,0,0.015);">
-                        <div style="font-size: 11px; color: #757575; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Top 20% Pareto Share</div>
-                        <div style="font-size: 24px; font-weight: 800; color: #3E2723; margin: 4px 0 2px 0; letter-spacing: -0.5px;">{pareto_concentration:.1f}%</div>
-                        <div style="font-size: 12px; color: #5D4037; font-weight: 600;">Yield by {top_20_count} Core SKUs</div>
+                    <div style="flex: 1; min-width: 180px; background: white; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+                        <div style="font-size: 12px; color: #757575; text-transform: uppercase;">Top 20% Pareto Share</div>
+                        <div style="font-size: 18px; font-weight: 800; color: #3E2723;">{pareto_concentration:.1f}%</div>
+                        <div style="font-size: 12px; color: #5D4037;">Generated by {top_20_count} core SKUs</div>
                     </div>
-
                 </div>
             </div>
             """,
             unsafe_allow_html=True
         )
+
 # ==================================================
 # STORES ROUTE
 # ==================================================
