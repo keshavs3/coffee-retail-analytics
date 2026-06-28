@@ -1,0 +1,81 @@
+product_id,product_detail,product_category,product_type,revenue,units,transactions,revenue_pct,cumulative_revenue_pct,pareto_group
+61,Sustainably Grown Organic Lg,Drinking Chocolate,Hot chocolate,21151.75,4453,2961,3.0268140803983807,3.0268140803983807,Top 80% Revenue
+59,Dark chocolate Lg,Drinking Chocolate,Hot chocolate,21006.0,4668,3029,3.005957264663604,6.032771345061985,Top 80% Revenue
+39,Latte Rg,Coffee,Barista Espresso,19112.25,4497,2896,2.7349617600479372,8.767733105109922,Top 80% Revenue
+41,Cappuccino Lg,Coffee,Barista Espresso,17641.75,4151,2772,2.52453330352657,11.292266408636493,Top 80% Revenue
+55,Morning Sunrise Chai Lg,Tea,Brewed Chai tea,17384.0,4346,2830,2.4876492949115536,13.779915703548047,Top 80% Revenue
+38,Latte,Coffee,Barista Espresso,17257.5,4602,2990,2.469547152953068,16.249462856501115,Top 80% Revenue
+36,Jamaican Coffee River Lg,Coffee,Premium brewed coffee,16481.25,4395,2911,2.3584658272987253,18.60792868379984,Top 80% Revenue
+60,Sustainably Grown Organic Rg,Drinking Chocolate,Hot chocolate,16233.75,4329,2842,2.323048593032123,20.930977276831964,Top 80% Revenue
+40,Cappuccino,Coffee,Barista Espresso,15997.5,4266,2793,2.2892412330503666,23.22021850988233,Top 80% Revenue
+27,Brazilian Lg,Coffee,Organic brewed coffee,15109.5,4317,2771,2.1621684894998916,25.38238699938222,Top 80% Revenue
+33,Ethiopia Lg,Coffee,Gourmet brewed coffee,14794.5,4227,2741,2.1170920095242165,27.499479008906437,Top 80% Revenue
+58,Dark chocolate Rg,Drinking Chocolate,Hot chocolate,14024.5,4007,2636,2.0069050584725656,29.506384067379003,Top 80% Revenue
+57,Spicy Eye Opener Chai Lg,Tea,Brewed Chai tea,13652.4,4404,2951,1.9536575721266964,31.4600416395057,Top 80% Revenue
+32,Ethiopia Rg,Coffee,Gourmet brewed coffee,13179.0,4393,2866,1.8859140622203958,33.3459557017261,Top 80% Revenue
+26,Brazilian Rg,Coffee,Organic brewed coffee,13155.0,4385,2904,1.882479663746059,35.22843536547216,Top 80% Revenue
+45,Peppermint Lg,Tea,Brewed herbal tea,13050.0,4350,2857,1.8674541704208336,37.095889535892994,Top 80% Revenue
+49,English Breakfast Lg,Tea,Brewed Black tea,12927.0,4309,2852,1.8498528782398556,38.94574241413285,Top 80% Revenue
+51,Earl Grey Lg,Tea,Brewed Black tea,12735.0,4245,2702,1.8223776904451583,40.76812010457801,Top 80% Revenue
+47,Serenity Green Tea Lg,Tea,Brewed Green tea,12660.0,4220,2750,1.8116451952128547,42.579765299790864,Top 80% Revenue
+30,Columbian Medium Roast Lg,Coffee,Gourmet brewed coffee,12585.0,4195,2731,1.800912699980551,44.380677999771414,Top 80% Revenue
+53,Traditional Blend Chai Lg,Tea,Brewed Chai tea,12522.0,4174,2716,1.7918974039854159,46.17257540375683,Top 80% Revenue
+37,Espresso shot,Coffee,Barista Espresso,12495.0,4165,2730,1.7880337057017865,47.960609109458616,Top 80% Revenue
+35,Jamaican Coffee River Rg,Coffee,Premium brewed coffee,12455.800000000001,4018,2594,1.7824241881937029,49.74303329765232,Top 80% Revenue
+43,Lemon Grass Lg,Tea,Brewed herbal tea,12267.0,4089,2647,1.7554069201955835,51.4984402178479,Top 80% Revenue
+24,Our Old Time Diner Blend Lg,Coffee,Drip coffee,11991.0,3997,2664,1.7159113377407065,53.21435155558861,Top 80% Revenue
+50,Earl Grey Rg,Tea,Brewed Black tea,11770.0,4708,3053,1.684286251789518,54.89863780737812,Top 80% Revenue
+8,Civet Cat,Coffee beans,Premium Beans,11700.0,260,190,1.674269256239368,56.57290706361749,Top 80% Revenue
+71,Chocolate Croissant,Bakery,Pastry,11625.98,3096,3076,1.6636769989447666,58.23658406256226,Top 80% Revenue
+54,Morning Sunrise Chai Rg,Tea,Brewed Chai tea,11607.5,4643,3026,1.661032512119527,59.897616574681784,Top 80% Revenue
+44,Peppermint Rg,Tea,Brewed herbal tea,11410.0,4564,2949,1.6327702746744606,61.53038684935625,Top 80% Revenue
+29,Columbian Medium Roast Rg,Coffee,Gourmet brewed coffee,11367.5,4547,3013,1.6266885273761553,63.1570753767324,Top 80% Revenue
+52,Traditional Blend Chai Rg,Tea,Brewed Chai tea,11280.0,4512,2955,1.614167282938468,64.77124265967088,Top 80% Revenue
+46,Serenity Green Tea Rg,Tea,Brewed Green tea,11192.5,4477,2921,1.6016460385007802,66.37288869817165,Top 80% Revenue
+23,Our Old Time Diner Blend Rg,Coffee,Drip coffee,11025.0,4410,2894,1.5776767991486351,67.95056549732028,Top 80% Revenue
+42,Lemon Grass Rg,Tea,Brewed herbal tea,10812.5,4325,2792,1.5472680626571085,69.4978335599774,Top 80% Revenue
+56,Spicy Eye Opener Chai Rg,Tea,Brewed Chai tea,10636.05,4171,2705,1.5220180788739086,71.0198516388513,Top 80% Revenue
+48,English Breakfast Rg,Tea,Brewed Black tea,10500.0,4200,2743,1.5025493325225097,72.52240097137381,Top 80% Revenue
+34,Jamaican Coffee River Sm,Coffee,Premium brewed coffee,9844.1,4018,2630,1.4086900842176038,73.93109105559142,Top 80% Revenue
+31,Ethiopia Sm,Coffee,Gourmet brewed coffee,9752.6,4433,2833,1.3955964400341934,75.32668749562562,Top 80% Revenue
+25,Brazilian Sm,Coffee,Organic brewed coffee,9482.0,4310,2814,1.3568735972360417,76.68356109286167,Top 80% Revenue
+22,Our Old Time Diner Blend Sm,Coffee,Drip coffee,8968.0,4484,2919,1.283320229910654,77.96688132277232,Top 80% Revenue
+78,Scottish Cream Scone ,Bakery,Scone,8949.45,1985,1952,1.2806657260898646,79.24754704886219,Top 80% Revenue
+87,Ouro Brasileiro shot,Coffee,Barista Espresso,8902.2,3262,2222,1.2739042540935133,80.5214513029557,Remaining Products
+28,Columbian Medium Roast Sm,Coffee,Gourmet brewed coffee,8356.0,4178,2728,1.1957430688150563,81.71719437177076,Remaining Products
+72,Ginger Scone,Bakery,Scone,8011.61,2540,2324,1.1464608817076825,82.86365525347844,Remaining Products
+79,Jumbo Savory Scone,Bakery,Scone,7626.62,2028,2008,1.0913688371812214,83.95502409065966,Remaining Products
+73,Almond Croissant,Bakery,Pastry,7168.13,1911,1903,1.0257589473271027,84.98078303798677,Remaining Products
+75,Croissant,Bakery,Pastry,6861.88,1954,1933,0.9819345917951962,85.96271762978196,Remaining Products
+70,Cranberry Scone,Bakery,Scone,6818.44,2092,2077,0.9757183305566458,86.93843596033861,Remaining Products
+76,Chocolate Chip Biscotti,Bakery,Biscotti,6748.96,1924,1891,0.9657757469734398,87.90421170731204,Remaining Products
+69,Hazelnut Biscotti,Bakery,Biscotti,6608.01,2028,2009,0.9456058109335306,88.84981751824557,Remaining Products
+74,Ginger Biscotti,Bakery,Biscotti,6436.56,1836,1811,0.9210713268324844,89.77088884507806,Remaining Products
+81,I Need My Bean! T-shirt,Branded,Clothing,6163.0,221,221,0.881924908222498,90.65281375330056,Remaining Products
+77,Oatmeal Scone,Bakery,Scone,5460.0,1820,1812,0.7813256529117052,91.43413940621227,Remaining Products
+9,Organic Decaf Blend,Coffee beans,Organic Beans,4657.5,206,206,0.6664879539260562,92.10062736013832,Remaining Products
+6,Ethiopia,Coffee beans,Gourmet Beans,4578.0,218,218,0.6551115089798143,92.75573886911813,Remaining Products
+83,I Need My Bean! Latte cup,Branded,Housewares,4509.0,315,304,0.645237613366095,93.40097648248423,Remaining Products
+1,Brazilian - Organic,Coffee beans,Organic Beans,3852.0,214,209,0.551220955131115,93.95219743761534,Remaining Products
+2,Our Old Time Diner Blend,Coffee beans,House blend Beans,3294.0,183,183,0.47137119060277594,94.42356862821812,Remaining Products
+4,Primo Espresso Roast,Coffee beans,Espresso Beans,3067.5,150,150,0.4389590550012189,94.86252768321934,Remaining Products
+82,I Need My Bean! Diner mug,Branded,Housewares,2935.0,240,222,0.4199983134241492,95.28252599664349,Remaining Products
+7,Jamacian Coffee River,Coffee beans,Premium Beans,2883.5,146,146,0.4126286666979674,95.69515466334146,Remaining Products
+3,Espresso Roast,Coffee beans,Espresso Beans,2492.75,169,169,0.35671236653766536,96.05186702987912,Remaining Products
+65,Sugar Free Vanilla syrup,Flavours,Sugar free syrup,2324.0,2905,1811,0.33256425226498215,96.3844312821441,Remaining Products
+5,Columbian Medium Roast,Coffee beans,Gourmet Beans,2220.0,148,148,0.3176818588761878,96.70211314102029,Remaining Products
+84,Chocolate syrup,Flavours,Regular syrup,2126.4,2658,1733,0.3042877048262729,97.00640084584657,Remaining Products
+63,Carmel syrup,Flavours,Regular syrup,2060.8,2576,1725,0.2949003489964179,97.30130119484299,Remaining Products
+21,Chili Mayan,Packaged Chocolate,Drinking Chocolate,1972.84,148,148,0.2823132785879722,97.58361447343097,Remaining Products
+64,Hazelnut syrup,Flavours,Regular syrup,1897.6000000000001,2372,1521,0.2715464393709252,97.85516091280189,Remaining Products
+20,Sustainably Grown Organic,Packaged Chocolate,Organic Chocolate,1679.6,221,221,0.24035065322902927,98.09551156603092,Remaining Products
+17,Morning Sunrise Chai,Loose Tea,Chai tea,1596.0,168,168,0.2283874985434215,98.32389906457435,Remaining Products
+15,Serenity Green Tea,Loose Tea,Green tea,1470.75,159,159,0.21046423150547444,98.53436329607982,Remaining Products
+13,English Breakfast,Loose Tea,Black tea,1440.9499999999998,161,161,0.2061998533998391,98.74056314947966,Remaining Products
+12,Peppermint,Loose Tea,Herbal tea,1369.35,153,153,0.1959538979513999,98.93651704743105,Remaining Products
+16,Traditional Blend Chai,Loose Tea,Chai tea,1369.35,153,153,0.1959538979513999,99.13247094538245,Remaining Products
+11,Lemon Grass,Loose Tea,Herbal tea,1360.3999999999999,152,152,0.19467315352034498,99.32714409890279,Remaining Products
+10,Guatemalan Sustainably Grown,Coffee beans,Green beans,1340.0,134,134,0.1917539148171584,99.51889801371995,Remaining Products
+18,Spicy Eye Opener Chai,Loose Tea,Chai tea,1335.8999999999999,122,122,0.19116720507779245,99.71006521879774,Remaining Products
+14,Earl Grey,Loose Tea,Black tea,1270.8999999999999,142,142,0.18186570920979597,99.89193092800754,Remaining Products
+19,Dark chocolate,Packaged Chocolate,Drinking Chocolate,755.2,118,118,0.10806907199247613,100.00000000000001,Remaining Products
