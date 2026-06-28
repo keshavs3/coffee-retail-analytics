@@ -312,6 +312,7 @@ if section == "Overview":
 # ==================================================
 if section == "Products":
     col_a, col_b = st.columns(2)
+
     with col_a:
         st.subheader(f"Top {top_n} Products Performance")
         top_products = filtered.groupby("product_detail", as_index=False).agg(revenue=("revenue", "sum")).sort_values(
@@ -322,6 +323,19 @@ if section == "Products":
         fig.update_layout(coloraxis_showscale=False, xaxis_title="Revenue ($)", yaxis_title="")
         st.plotly_chart(fig, use_container_width=True, theme=None)
 
+        # Description for Top Products Horizontal Bar Chart
+        st.markdown(
+            """
+            <div style="font-size: 14.5px; color: #4E342E; line-height: 1.6; margin-top: 8px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <b>➤ Product Velocity Leaderboard:</b><br>
+                Ranks individual menu SKUs based on absolute gross returns. 
+                Use this breakdown to pinpoint high-volume menu assets, validate promotional campaigns, 
+                and identify premium items for premium placement or cross-selling.
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
     with col_b:
         st.subheader("Category Revenue Share Mix")
         category_mix = filtered.groupby("product_category", as_index=False)["revenue"].sum()
@@ -331,6 +345,18 @@ if section == "Products":
         fig.update_traces(textposition="inside", textinfo="percent+label")
         st.plotly_chart(fig, use_container_width=True, theme=None)
 
+        # Description for Category Share Donut Chart
+        st.markdown(
+            """
+            <div style="font-size: 14.5px; color: #4E342E; line-height: 1.6; margin-top: 8px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <b>➤ Category Dependency Distribution:</b><br>
+                Illustrates the percentage share that each product line contributes to the total portfolio. 
+                Monitoring this mix helps ensure macro portfolio diversification and flags structural over-reliance 
+                on a single segment.
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
     # PARETO DENSITY FRAMEWORK
     st.markdown("---")
     st.subheader("Revenue Concentration (Pareto Analysis)")
@@ -352,6 +378,19 @@ if section == "Products":
     fig = apply_theme(fig)
     st.plotly_chart(fig, use_container_width=True, theme=None)
 
+    # Brand-aligned Pareto Analysis narrative block placed beneath the figure canvas
+    st.markdown(
+        """
+        <div style="font-size: 14.5px; color: #4E342E; line-height: 1.6; margin-top: 8px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+            <b>➤ Pareto Principle Revenue Concentration Audit:</b><br>
+            Visualizes the 80/20 rule by plotting individual SKU yields against their cumulative percentage share. 
+            Items to the left of the intersecting 80% threshold represent your vital core revenue anchors, 
+            while columns to the right isolate the low-velocity tail candidates prime for menu simplification or elimination.
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
     # PORTFOLIO METRIC INFO ENGINE CARD BLOCK
     product_rev = filtered.groupby("product_detail")["revenue"].sum().sort_values(ascending=False)
     if len(product_rev) > 0:
@@ -365,34 +404,74 @@ if section == "Products":
 
         st.markdown(
             f"""
-            <div style="background-color: #FDFBF7; padding: 22px; border-radius: 8px; border: 1px solid #EFEBE9; border-left: 6px solid #2E7D32; margin-top: 15px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
-                <h3 style="margin: 0 0 15px 0; color: #1B5E20; font-size: 2.2rem;">Portfolio Concentration & Performance</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-                    <div style="flex: 1.5; min-width: 280px;">
-                        <h4 style="margin: 0 0 4px 0; color: #2E7D32; font-size: 1.8rem;">🥇 Hero Product</h4>
-                        <p style="margin: 6px 0; font-size: 24px; font-weight: bold; color: #3E2723;">➝ {hero_product}</p>
+            <div style="
+                background-color: #FDFBF7; 
+                padding: 24px; 
+                border-radius: 12px; 
+                border: 1px solid #EFEBE9; 
+                border-left: 8px solid #2E7D32; 
+                margin-top: 20px; 
+                margin-bottom: 25px;
+                box-shadow: 0 4px 12px rgba(46, 125, 50, 0.03);
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            ">
+                <!-- Section Header Element -->
+                <h3 style="
+                    margin: 0 0 18px 0; 
+                    color: #1B5E20; 
+                    font-size: 1.85rem; 
+                    font-weight: 800; 
+                    letter-spacing: -0.5px;
+                ">
+                    📊 Portfolio Concentration & Performance
+                </h3>
+
+                <!-- Flex Container Layout Area -->
+                <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: stretch;">
+
+                    <!-- Hero Product Feature Item Card -->
+                    <div style="
+                        flex: 1.5; 
+                        min-width: 260px; 
+                        display: flex; 
+                        flex-direction: column; 
+                        justify-content: center;
+                        padding-right: 10px;
+                    ">
+                        <span style="color: #2E7D32; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">
+                            🥇 Leading Revenue Anchor
+                        </span>
+                        <h4 style="color: #3E2723; margin: 6px 0 0 0; font-size: 24px; font-weight: 800; letter-spacing: -0.3px; line-height: 1.3;">
+                            {hero_product}
+                        </h4>
                     </div>
-                    <div style="flex: 1; min-width: 180px; background: white; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-                        <div style="font-size: 12px; color: #757575; text-transform: uppercase;">Hero Revenue</div>
-                        <div style="font-size: 18px; font-weight: 800; color: #3E2723;">${hero_revenue:,.2f}</div>
-                        <div style="font-size: 14px; color: #2E7D32; font-weight: 600;">{hero_share:.1f}% share</div>
+
+                    <!-- Financial Yield Metric Card Frame -->
+                    <div style="flex: 1; min-width: 175px; background: white; padding: 18px 16px; border-radius: 10px; border: 1px solid #F5F5F5; box-shadow: 0 2px 6px rgba(0,0,0,0.015);">
+                        <div style="font-size: 11px; color: #757575; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Hero Revenue</div>
+                        <div style="font-size: 24px; font-weight: 800; color: #3E2723; margin: 4px 0 2px 0; letter-spacing: -0.5px;">${hero_revenue:,.2f}</div>
+                        <div style="font-size: 13px; color: #2E7D32; font-weight: 700;">★ {hero_share:.1f}% Share</div>
                     </div>
-                    <div style="flex: 1; min-width: 180px; background: white; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-                        <div style="font-size: 12px; color: #757575; text-transform: uppercase;">Catalog Multiplier</div>
-                        <div style="font-size: 18px; font-weight: 800; color: #2E7D32;">{multiplier:.1f}x Higher</div>
-                        <div style="font-size: 12px; color: #A1887F;">than average variant</div>
+
+                    <!-- Asset Multiplier Velocity Metric Card Frame -->
+                    <div style="flex: 1; min-width: 175px; background: white; padding: 18px 16px; border-radius: 10px; border: 1px solid #F5F5F5; box-shadow: 0 2px 6px rgba(0,0,0,0.015);">
+                        <div style="font-size: 11px; color: #757575; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Catalog Multiplier</div>
+                        <div style="font-size: 24px; font-weight: 800; color: #2E7D32; margin: 4px 0 2px 0; letter-spacing: -0.5px;">{multiplier:.1f}x Higher</div>
+                        <div style="font-size: 12px; color: #A1887F; font-weight: 500; font-style: italic;">vs baseline variant avg</div>
                     </div>
-                    <div style="flex: 1; min-width: 180px; background: white; padding: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-                        <div style="font-size: 12px; color: #757575; text-transform: uppercase;">Top 20% Pareto Share</div>
-                        <div style="font-size: 18px; font-weight: 800; color: #3E2723;">{pareto_concentration:.1f}%</div>
-                        <div style="font-size: 12px; color: #5D4037;">Generated by {top_20_count} core SKUs</div>
+
+                    <!-- Pareto Operational Efficiency Metric Card Frame -->
+                    <div style="flex: 1; min-width: 175px; background: white; padding: 18px 16px; border-radius: 10px; border: 1px solid #F5F5F5; box-shadow: 0 2px 6px rgba(0,0,0,0.015);">
+                        <div style="font-size: 11px; color: #757575; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Top 20% Pareto Share</div>
+                        <div style="font-size: 24px; font-weight: 800; color: #3E2723; margin: 4px 0 2px 0; letter-spacing: -0.5px;">{pareto_concentration:.1f}%</div>
+                        <div style="font-size: 12px; color: #5D4037; font-weight: 600;">Yield by {top_20_count} Core SKUs</div>
                     </div>
+
                 </div>
             </div>
             """,
             unsafe_allow_html=True
         )
-
 # ==================================================
 # STORES ROUTE
 # ==================================================
@@ -423,11 +502,25 @@ if section == "Stores":
     st.markdown("---")
 
     chart_col, pie_col = st.columns(2)
+
     with chart_col:
         st.subheader("Gross Store Revenue Profile")
         fig = px.bar(store_ranking, x="store_location", y="Revenue", color_discrete_sequence=[COLOR_MOCHA])
         fig = apply_theme(fig)
         st.plotly_chart(fig, use_container_width=True, theme=None)
+
+        # Description for Store Revenue Bar Chart
+        st.markdown(
+            """
+            <div style="font-size: 14.5px; color: #4E342E; line-height: 1.6; margin-top: 8px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <b>➤ Location Yield Comparison:</b><br>
+                Ranks absolute gross revenue performance across active retail locations. 
+                Use this metric to quickly identify regional benchmark hubs and pinpoint locations 
+                requiring strategic intervention or targeted promotion support.
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 
     with pie_col:
         st.subheader("Market Share Footprint Breakdowns")
@@ -436,13 +529,38 @@ if section == "Stores":
         fig = apply_theme(fig)
         st.plotly_chart(fig, use_container_width=True, theme=None)
 
+        # Description for Market Share Donut Chart
+        st.markdown(
+            """
+            <div style="font-size: 14.5px; color: #4E342E; line-height: 1.6; margin-top: 8px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <b>➤ Store Location Revenue Share:</b><br>
+                Illustrates the percentage slice of total brand revenue owned by each store hub. 
+                Monitoring this proportional mix flags structural concentration risks and highlights how heavily 
+                overall business success relies on a single storefront asset.
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
     # DATAFRAME DATA VIEW TABLE
+    st.divider()
     st.subheader("Store Core Performance Rankings Ledger")
     display_store = store_ranking.copy()
     display_store["Revenue"] = display_store["Revenue"].map("${:,.0f}".format)
     display_store["Avg Basket"] = display_store["Avg Basket"].map("${:,.2f}".format)
     st.dataframe(display_store, use_container_width=True, hide_index=True)
 
+    # Description for the Core Performance Ledger Table
+    st.markdown(
+        """
+        <div style="font-size: 14.5px; color: #4E342E; line-height: 1.6; margin-top: 8px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+            <b>➤ Operational Performance Scorecard:</b><br>
+            Consolidates raw transaction tallies, overall volume metrics, and ticket-level averages (Avg Basket) into a clean corporate ledger. 
+            It allows management to contrast sheer scaling power against true customer ticket efficiency.
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 # ==================================================
 # INSIGHTS ENGINE MANAGEMENT ROUTE
 # ==================================================
