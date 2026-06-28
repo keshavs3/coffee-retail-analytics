@@ -1,5 +1,7 @@
 \# ☕ Specialty Retail Portfolio Optimization \& Revenue Analytics Platform
 
+\[!\[Open in Streamlit](https://static.streamlit.io/badges/streamlit\_badge\_black\_white.svg)](https://coffee-retail-analytics-new.streamlit.app/)
+
 
 
 An institutional-grade, interactive Business Intelligence (BI) dashboard designed for specialty coffee retail networks (Afficionado Coffee Roasters). This software functions as a responsive Decision Support System (DSS) that processes high-density point-of-sale (POS) data to eliminate operational blind spots, streamline menu layers, and optimize floor labor schedules.
