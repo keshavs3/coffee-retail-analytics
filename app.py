@@ -408,15 +408,6 @@ if section == "Products":
                 <h3 style="margin: 0 0 15px 0; color: #1B5E20; font-size: 2.2rem;">Portfolio Concentration & Performance</h3>
                 <div style="display: flex; flex-wrap: wrap; gap: 20px;">
                     <div style="flex: 1.5; min-width: 280px;">
-                       <div style="
-                flex: 1.5;
-                min-width: 280px;
-                background-color: #E8F5E9;
-                padding: 18px;
-                border-radius: 10px;
-                border: 1px solid #A5D6A7;
-                box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            ">
                         <h4 style="margin: 0 0 4px 0; color: #2E7D32; font-size: 1.8rem;">🥇 Hero Product</h4>
                         <p style="margin: 6px 0; font-size: 24px; font-weight: bold; color: #3E2723;">➝ {hero_product}</p>
                     </div>
